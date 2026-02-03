@@ -1,0 +1,18 @@
+name: Hourly System Backup
+on:
+  schedule:
+    # 매시간 정각(0분)에 실행
+    - cron: '0 * * * *'
+  workflow_dispatch: # 수동 실행 버튼 추가
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Backup API
+        run: |
+          # 프로덕션 서버의 백업 API 호출 (타임아웃 30초)
+          curl -X GET ${{ secrets.PRODUCTION_URL }}/api/system/backup/now \
+          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+          --max-time 30 \
+          --fail
