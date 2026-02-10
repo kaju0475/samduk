@@ -1,0 +1,4 @@
+﻿
+> samduk-system@0.1.1 lint:app
+> next lint app
+

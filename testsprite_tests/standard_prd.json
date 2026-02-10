@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "project": "Gas Cylinder Management System",
+    "date": "2026-01-09",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "This system manages the lifecycle of gas cylinders through authentication, inventory management, charging and delivery workflows, and comprehensive system auditing and reporting.",
+  "core_goals": [
+    "Provide secure and reliable user authentication including QR-based login.",
+    "Maintain accurate and up-to-date records of gas cylinders with CRUD operations.",
+    "Enable smooth handling of charging and delivery workflows for cylinders.",
+    "Ensure transparent tracking through history logs for each cylinder.",
+    "Deliver thorough system audit and generate long-term inventory reports for operational insight.",
+    "Implement robust debugging and error detection using AI collaboration and testing to ensure system integrity and real-time data synchronization between PC and mobile devices."
+  ],
+  "key_features": [
+    "Authentication API supporting login, logout, and QR-based authentication.",
+    "Cylinder Master API for creating, updating, and listing gas cylinders with import capability.",
+    "Charging Work API to manage start and completion of charging operations.",
+    "Delivery Work API to process delivery and collection actions linked to customers.",
+    "History API to retrieve historical data and traceability for cylinders.",
+    "System Audit & Reports API providing lifecycle management, migration status, and long-term reporting.",
+    "Real-time synchronization of data between mobile and PC frontend environments.",
+    "Debugging and comprehensive system testing using AI and LLM tools to detect and correct errors during development and deployment."
+  ],
+  "user_flow_summary": [
+    "User authenticates via login or QR code authentication endpoints.",
+    "Authorized users access cylinder inventory to create, update or list cylinders.",
+    "Users initiate charging workflows by starting and completing charge actions on selected cylinders.",
+    "Delivery and collection requests are processed through designated endpoints associating cylinders with customers.",
+    "Users or admins retrieve historical data to track cylinder usage and status changes.",
+    "System administrators perform audits and generate reports to monitor long-term inventory health and system lifecycle states."
+  ],
+  "validation_criteria": [
+    "Successful user login and logout with session management.",
+    "Accurate creation, update, and listing of cylinder records with no data loss.",
+    "Correct processing of charging and delivery actions with proper status updates.",
+    "Reliable retrieval of cylinder history reflecting all past activities.",
+    "System audit reports must show consistent and comprehensive data.",
+    "Stable operation across both mobile and PC versions with real-time data reflection.",
+    "All identified issues during debugging are documented and resolved to achieve near zero defects before production deployment."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "JSON DB (Local filesystem)"
+    ],
+    "features": [
+      {
+        "name": "Auth API",
+        "description": "Authentication endpoints for login, logout, and QR-based authentication.",
+        "files": [
+          "app/api/auth/login/route.ts",
+          "app/api/auth/logout/route.ts",
+          "app/api/auth/qr-login/route.ts",
+          "app/api/auth/qr-check/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "info": {
+            "title": "Auth API",
+            "version": "1.0.0"
+          },
+          "paths": {
+            "/api/auth/login": {
+              "post": {
+                "summary": "User Login"
+              }
+            },
+            "/api/auth/logout": {
+              "post": {
+                "summary": "User Logout"
+              }
+            },
+            "/api/auth/qr-login": {
+              "post": {
+                "summary": "QR Login"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Cylinder Master API",
+        "description": "CRUD operations for Gas Cylinders.",
+        "files": [
+          "app/api/master/cylinders/route.ts",
+          "app/api/master/cylinders/import/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/master/cylinders": {
+              "get": {
+                "summary": "List Cylinders"
+              },
+              "post": {
+                "summary": "Create Cylinder"
+              },
+              "put": {
+                "summary": "Update Cylinder"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Charging Work API",
+        "description": "Handle the charging process flow (Start Charging, Finish Charging).",
+        "files": [
+          "app/api/work/charging/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/work/charging": {
+              "post": {
+                "summary": "Process Charging Action",
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "action": {
+                            "type": "string",
+                            "enum": [
+                              "START",
+                              "COMPLETE"
+                            ]
+                          },
+                          "cylinders": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Delivery Work API",
+        "description": "Handle delivery and collection of cylinders.",
+        "files": [
+          "app/api/work/delivery/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/work/delivery": {
+              "post": {
+                "summary": "Process Delivery/Collection",
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "action": {
+                            "type": "string",
+                            "enum": [
+                              "DELIVERY",
+                              "COLLECTION"
+                            ]
+                          },
+                          "cylinders": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "customerId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "History API",
+        "description": "Retrieve history for specific cylinders.",
+        "files": [
+          "app/api/history/cylinder/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/history/cylinder": {
+              "get": {
+                "summary": "Get Cylinder History"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "System Audit & Reports",
+        "description": "System-wide reports and data integrity checks.",
+        "files": [
+          "app/api/system/lifecycle/route.ts",
+          "app/api/system/migrate-status/route.ts",
+          "app/api/system/reports/long-term/route.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/system/reports/long-term": {
+              "get": {
+                "summary": "Long Term Inventory Report"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

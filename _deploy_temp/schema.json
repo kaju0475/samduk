@@ -1,0 +1,80 @@
+{
+  "cylinders": [
+    "id",
+    "gas_type",
+    "ownership",
+    "owner_id",
+    "location",
+    "status",
+    "lastTransactionDate",
+    "returnDate",
+    "memo",
+    "created_at",
+    "chargingExpiryDate",
+    "workPressure",
+    "containerType",
+    "gasColor",
+    "charging_expiry_date",
+    "manufacture_date",
+    "last_inspection_date",
+    "capacity",
+    "container_type",
+    "parent_rack_id",
+    "is_deleted",
+    "deleted_at",
+    "serial_number",
+    "volume"
+  ],
+  "transactions": [
+    "id",
+    "type",
+    "date",
+    "customerName",
+    "gasType",
+    "quantity",
+    "workerId",
+    "customerId",
+    "cylinderId",
+    "status",
+    "is_manual",
+    "created_at"
+  ],
+  "customers": [
+    "id",
+    "name",
+    "phone",
+    "address",
+    "manager",
+    "tanks",
+    "lastTransactionDate",
+    "balance",
+    "created_at",
+    "type",
+    "payment_type",
+    "business_number",
+    "ledger_number",
+    "corporate_id",
+    "fax"
+  ],
+  "users": [
+    "id",
+    "username",
+    "name",
+    "role",
+    "password",
+    "created_at"
+  ],
+  "gas_items": [
+    "id",
+    "name",
+    "capacity",
+    "color"
+  ],
+  "errors": {
+    "cyl": null,
+    "tx": null,
+    "cus": null,
+    "usr": null,
+    "gas": null
+  }
+}

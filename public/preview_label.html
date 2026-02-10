@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Preview: Standard vs Rotated</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            gap: 50px;
+        }
+
+        h2 { margin-bottom: 10px; color: #333; font-size: 18px; }
+        .description { color: #666; font-size: 14px; margin-bottom: 20px; text-align: center; }
+
+        /* Common Label Container */
+        .label-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- FIXED ZONE CSS (Same as React Component) --- */
+        .inner-content {
+            width: 24mm;
+            height: 30mm;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-zone {
+            flex: 0 0 4.5mm;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .center-zone {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .bottom-zone {
+            flex: 0 0 4mm;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+            border-top: 1px dashed #eee;
+        }
+
+        .text-content {
+            white-space: nowrap;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            font-size: 8px; /* Print size approx */
+        }
+        .text-bottom {
+            font-family: monospace;
+            font-size: 7px;
+        }
+
+        /* --- 1. STANDARD PRINT (24mm x 30mm) --- */
+        .print-standard {
+            width: 24mm;
+            height: 30mm;
+        }
+
+        /* --- 2. ROTATED PRINT (30mm x 24mm) --- */
+        /* This simulates the 'Rotate 90' Checkbox */
+        .print-rotated-container {
+            width: 30mm;
+            height: 24mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white; /* Paper color */
+        }
+        
+        .print-rotated-inner {
+            width: 24mm;
+            height: 30mm;
+            /* Rotate -90 degrees */
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Standard -->
+    <div>
+        <h2>1. Standard Print (Vertical)</h2>
+        <div class="description">Size: 24mm x 30mm<br>For printers that Auto-Rotate</div>
+        <div class="label-container print-standard">
+            <div class="inner-content">
+                <div class="top-zone"><div class="text-content">Test Mule</div></div>
+                <div class="center-zone" id="qr-std"></div>
+                <div class="bottom-zone"><div class="text-content text-bottom">TM-001</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Rotated -->
+    <div>
+        <h2>2. Rotated Print (Landscape)</h2>
+        <div class="description">Size: 30mm x 24mm<br>Rotated -90° (Checkbox Checked)</div>
+        <div class="label-container print-rotated-container">
+            <!-- This Inner Wrapper is rotated -->
+            <div class="print-rotated-inner">
+                <div class="inner-content">
+                    <div class="top-zone"><div class="text-content">Test Mule</div></div>
+                    <div class="center-zone" id="qr-rot"></div>
+                    <div class="bottom-zone"><div class="text-content text-bottom">TM-001</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate QRs
+        // Fixed Zone allows big QR (size ~78 for 24mm width)
+        
+        // Standard
+        new QRCode(document.getElementById("qr-std"), {
+            text: "TM-001",
+            width: 78,
+            height: 78,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.M
+        });
+
+        // Rotated (Same size)
+        new QRCode(document.getElementById("qr-rot"), {
+            text: "TM-001",
+            width: 78,
+            height: 78,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.M
+        });
+    </script>
+</body>
+</html>

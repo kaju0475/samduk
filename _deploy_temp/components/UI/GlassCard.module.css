@@ -1,0 +1,26 @@
+.base {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* .static removed as it was empty */
+
+.interactive {
+  cursor: pointer;
+}
+.interactive:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  background: linear-gradient(135deg, rgba(51, 154, 240, 0.15) 0%, rgba(51, 154, 240, 0.05) 100%);
+  border-color: rgba(51, 154, 240, 0.5);
+  box-shadow: 0 0 20px rgba(51, 154, 240, 0.2);
+}

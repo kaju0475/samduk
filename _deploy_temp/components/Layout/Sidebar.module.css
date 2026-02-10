@@ -1,0 +1,123 @@
+.navbar {
+  height: 100vh;
+  width: 100%;
+  padding: var(--mantine-spacing-md);
+  /* REVISED: "Lighter Fade" Gradient (User Request) */
+  /* Bottom: Light Navy -> Top: Lighter (Pale) Navy */
+  /* REVISED: "Titanium Fade Out" Gradient (User Request) */
+  /* Center: Dark Gunmetal -> Ends: Lighter Titanium */
+  background: linear-gradient(180deg, 
+    #7B8895 0%, 
+    #313840 30%, 
+    #313840 70%, 
+    #7B8895 100%
+  );
+  display: flex;
+  flex-direction: column;
+  /* Force remove border applied by Mantine AppShell */
+  border-right: 0 !important;
+  /* Fixed: Allow vertical scrolling within the menu itself */
+  overflow-y: auto; 
+  /* Reverted mobile width constraint */
+}
+
+.header {
+  /* Expand to edges */
+  margin-top: calc(var(--mantine-spacing-md) * -1);
+  margin-left: calc(var(--mantine-spacing-md) * -1);
+  margin-right: calc(var(--mantine-spacing-md) * -1);
+  
+  /* Internal spacing - Halved bottom padding (5px) */
+  padding: var(--mantine-spacing-xl) var(--mantine-spacing-md) 5px var(--mantine-spacing-md);
+  
+  /* Halved spacing to next element (5px) */
+  margin-bottom: 5px;
+  
+  /* Background removed to allow unified sidebar gradient to show */
+  background: transparent;
+  
+  /* Boundary Line removed */
+}
+
+/* Footer removed, using spacing in TSX */
+
+.navbarMain {
+  flex: 1;
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem; /* Standard PC size */
+  color: var(--mantine-color-premiumTitanium-1);
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  font-weight: 700; /* Bolder for larger text */
+  transition: all 0.2s ease;
+  /* Reverted to Horizontal Gradient */
+  background: transparent;
+  border: 1px solid transparent;
+  border-left: 4px solid transparent;
+  overflow: hidden;
+
+  &:hover {
+    background: linear-gradient(90deg, 
+      color-mix(in srgb, var(--item-color), transparent 50%) 0%, 
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-left: 4px solid color-mix(in srgb, var(--item-color), transparent 50%);
+    color: var(--mantine-color-white);
+    transform: translateX(4px);
+  }
+
+  &[data-active] {
+    /* RESTORED: Premium Gradient with White Tip */
+    background: linear-gradient(90deg, 
+      color-mix(in srgb, var(--item-color), transparent 20%) 0%, 
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    
+    /* Strong Left Accent & Borders */
+    border-left: 4px solid var(--item-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* RESTORED: Controlled Glow Effect */
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--item-color), transparent 85%);
+    
+    color: var(--mantine-color-white);
+  }
+}
+
+.linkLabel {
+  margin-left: var(--mantine-spacing-md); /* Increased spacing for larger icons */
+}
+
+/* Pure CSS Responsiveness (Simple & Certain) */
+/* 62em = 992px matches Mantine 'md' breakpoint */
+
+/* Hide on Desktop, Show on Mobile */
+.mobileOnly {
+  display: none !important;
+}
+
+@media (max-width: 62em) {
+  .mobileOnly {
+    display: flex !important;
+  }
+}
+
+/* Show on Desktop, Hide on Mobile */
+.desktopOnly {
+  display: flex !important;
+}
+
+@media (max-width: 62em) {
+  .desktopOnly {
+    display: none !important;
+  }
+}

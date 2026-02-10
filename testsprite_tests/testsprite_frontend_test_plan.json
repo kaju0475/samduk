@@ -1,0 +1,341 @@
+[
+  {
+    "id": "TC001",
+    "title": "User login success",
+    "description": "Verify that a user can successfully log in with valid credentials via the login API.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/auth/login with valid username and password."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive successful response with authentication token and session established."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User logout success",
+    "description": "Verify that a logged-in user can successfully log out and the session is invalidated.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/auth/logout with valid authentication token."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive successful logout response and authentication token is invalidated."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Create new gas cylinder record",
+    "description": "Verify that an authorized user can create a new gas cylinder with valid data.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/master/cylinders with valid cylinder data payload."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive response confirming creation and cylinder exists in the listing."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Update existing gas cylinder record",
+    "description": "Verify that an authorized user can update details of an existing gas cylinder.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send PUT request to /api/master/cylinders with valid updated data and existing cylinder ID."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive successful update response and updated data is reflected in the cylinder listing."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "List gas cylinders",
+    "description": "Verify that the cylinder listing API returns all cylinders with correct data.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send GET request to /api/master/cylinders."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive a list of all gas cylinders with correct details as previously created or updated."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Import gas cylinder records",
+    "description": "Verify that bulk import of gas cylinders through import API is processed correctly.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to import route with a valid batch of cylinder data."
+      },
+      {
+        "type": "assertion",
+        "description": "All cylinders are created or updated accordingly, with appropriate success report."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Start charging workflow on selected cylinders",
+    "description": "Ensure that initiating a charging operation on cylinders updates their status correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/charging with action=START and valid cylinder IDs."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify response success and that cylinder statuses reflect 'charging started'."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Complete charging workflow on selected cylinders",
+    "description": "Ensure that completing charging operations updates cylinders’ status appropriately.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/charging with action=COMPLETE and valid cylinder IDs."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify response success and that cylinder statuses reflect 'charging completed'."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Process delivery action with valid cylinders and customer",
+    "description": "Verify delivery of cylinders to customers updates delivery status and associations accordingly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/delivery with action=DELIVERY, valid cylinder IDs, and customer ID."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify successful response and cylinders marked as delivered to specified customer."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Process collection action of cylinders from customer",
+    "description": "Verify that collection of cylinders updates cylinder status and customer association accurately.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/delivery with action=COLLECTION, valid cylinder IDs, and customer ID."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify response success and that cylinders are disassociated from the customer and status updated."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Retrieve cylinder history logs",
+    "description": "Verify ability to retrieve complete and accurate history for a specific cylinder.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send GET request to /api/history/cylinder with a valid cylinder ID."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive comprehensive history data including creation, updates, charging, delivery, and collection events."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Generate long term inventory report",
+    "description": "Verify that the system can generate comprehensive long-term inventory reports reflecting lifecycle data.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send GET request to /api/system/reports/long-term."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive detailed report covering inventory trends, lifecycle states, and migration statuses."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Handle invalid login credentials",
+    "description": "Verify that login API rejects invalid credentials and returns appropriate error response.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/auth/login with invalid username or password."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive error response indicating authentication failure without leaking system details."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Fail to update non-existent cylinder",
+    "description": "Verify system returns an appropriate error when attempting to update a cylinder that does not exist.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send PUT request to /api/master/cylinders with an unknown cylinder ID."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive a 'not found' error response and no operation is performed."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Fail charging workflow with invalid cylinder IDs",
+    "description": "Verify charging action fails when invalid or unknown cylinder IDs are provided.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/charging with action=START or COMPLETE and invalid cylinder IDs."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive error response indicating invalid cylinder references and no status updates are made."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Fail delivery action when customer ID is missing",
+    "description": "Verify delivery API returns an error if the customerId field is omitted or invalid.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send POST request to /api/work/delivery with action=DELIVERY or COLLECTION without customerId."
+      },
+      {
+        "type": "assertion",
+        "description": "Receive validation error response and no delivery or collection action is performed."
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Real-time synchronization between PC and mobile",
+    "description": "Verify that updates performed on PC are instantly reflected on mobile client and vice versa.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Update cylinder data on PC frontend."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that mobile frontend reflects the update in real-time without any manual refresh."
+      },
+      {
+        "type": "action",
+        "description": "Update cylinder status on mobile frontend."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm PC frontend shows updated status immediately."
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "System audit lifecycle data validation",
+    "description": "Verify that system audit reports lifecycle data integrity and migration status consistently.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Request lifecycle and migration status reports via system audit endpoints."
+      },
+      {
+        "type": "assertion",
+        "description": "Validate that reports are complete, accurate, and match expected lifecycle states of all cylinders."
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Debug log and error detection validation",
+    "description": "Verify that during development and deployment, all detected issues are logged and addressed, achieving near zero defects.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate common error scenarios such as invalid API calls, data conflicts, and unexpected input."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure all errors are captured in debug logs, appropriate error messages are returned, and fixes are applied."
+      },
+      {
+        "type": "action",
+        "description": "Run AI-assisted tests and error detection tools integrated in the system."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that all identified issues are documented and successfully resolved before production deployment."
+      }
+    ]
+  }
+]

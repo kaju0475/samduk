@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연속 스캔 테스트용 QR코드 (20개)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f0f0f0;
+      }
+      h1 {
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .qr-container {
+        margin-bottom: 10px;
+      }
+      .label {
+        font-weight: bold;
+        color: #333;
+        font-size: 0.9em;
+      }
+      .print-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      @media print {
+        .print-btn {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+        .card {
+          box-shadow: none;
+          border: 1px solid #ddd;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🚀 연속 스캔 테스트용 QR (20 Set)</h1>
+    <button class="print-btn" onclick="window.print()">🖨️ 출력하기</button>
+
+    <div class="grid" id="qr-grid"></div>
+
+    <script>
+      const container = document.getElementById('qr-grid');
+      // Generate 20 Serial Numbers
+      const startNum = 1;
+      const count = 20;
+
+      for (let i = 0; i < count; i++) {
+        const num = (startNum + i).toString().padStart(3, '0');
+        const serial = `TEST-SCAN-${num}`;
+
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const qrDiv = document.createElement('div');
+        qrDiv.className = 'qr-container';
+        qrDiv.id = `qr-${i}`;
+
+        const label = document.createElement('div');
+        label.className = 'label';
+        label.innerText = serial;
+
+        card.appendChild(qrDiv);
+        card.appendChild(label);
+        container.appendChild(card);
+
+        // Generate QR
+        new QRCode(qrDiv, {
+          text: serial,
+          width: 120,
+          height: 120,
+          colorDark: '#000000',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.M,
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,519 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "username": "admin",
+      "name": "관리자",
+      "role": "관리자",
+      "password": "1234"
+    },
+    {
+      "id": "USER-1766981903995",
+      "username": "123",
+      "name": "123",
+      "role": "사용자",
+      "password": "123"
+    },
+    {
+      "id": "USER-1766981920101",
+      "username": "222",
+      "name": "222",
+      "role": "사용자",
+      "password": "222"
+    },
+    {
+      "id": "USER-1766982074017",
+      "username": "333",
+      "name": "333",
+      "role": "사용자",
+      "password": "333"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUST001",
+      "name": "태성NCT",
+      "type": "BUSINESS",
+      "paymentType": "POSTPAY",
+      "balance": 0,
+      "ledgerNumber": "001",
+      "representative": "정다은",
+      "address": "경기도 성남시",
+      "phone": "010-7162-6362",
+      "businessNumber": "233-86-85517",
+      "corporateId": "721-42-24017"
+    },
+    {
+      "id": "CUST002",
+      "name": "개인고객A",
+      "type": "INDIVIDUAL",
+      "paymentType": "PREPAY",
+      "balance": 0,
+      "ledgerNumber": "002",
+      "representative": "최지훈",
+      "address": "광주시 서구",
+      "phone": "010-2091-3190"
+    },
+    {
+      "id": "C1766970937864",
+      "name": "명일특수금속",
+      "type": "BUSINESS",
+      "paymentType": "tax_invoice",
+      "address": "대곶",
+      "phone": "031-888-9632",
+      "businessNumber": "1111111-584622222",
+      "ledgerNumber": "007",
+      "corporateId": "627-81-41649",
+      "representative": "이영자",
+      "fax": "",
+      "balance": 0
+    },
+    {
+      "id": "C1766970977656",
+      "name": "성화전기",
+      "type": "BUSINESS",
+      "paymentType": "tax_invoice",
+      "address": "대곶면 학운리",
+      "phone": "031-879-1148",
+      "businessNumber": "5879446-48565855",
+      "ledgerNumber": "008",
+      "corporateId": "318-83-83366",
+      "representative": "김찬수",
+      "fax": "",
+      "balance": 0
+    }
+  ],
+  "cylinders": [
+    {
+      "id": "restore-manual-id",
+      "serialNumber": "SDG-TT12345",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "삼덕가스공업(주)",
+      "currentHolderId": "삼덕공장",
+      "status": "공병",
+      "chargingExpiryDate": "2026-02",
+      "manufactureDate": "2021-02",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T12:30:34.570Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "19521b02-d2f0-456a-aa01-fa4de59f962c",
+      "serialNumber": "SDG-TT654951",
+      "gasType": "질소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-06-01",
+      "manufactureDate": "2024-06-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:08:38.708Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "ff3f06ec-0d35-40ee-a3e2-04263b76425a",
+      "serialNumber": "SDG-TT357896",
+      "gasType": "아르곤",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08-01",
+      "manufactureDate": "2024-08-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:09:07.008Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "282d804c-1da0-4c53-ae87-24ed34f09263",
+      "serialNumber": "SDG-TT258741",
+      "gasType": "탄산",
+      "capacity": "40Kg",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2028-08",
+      "manufactureDate": "2023-08",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:09:40.691Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "7befc532-12eb-4d5d-a295-e62ed7f7be90",
+      "serialNumber": "SDG-TT9632147",
+      "gasType": "헬륨",
+      "capacity": "47L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-10",
+      "manufactureDate": "2024-10",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:10:03.246Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "867d8004-7da7-4eb8-b7ec-ed236f8308bf",
+      "serialNumber": "SDG-TT9511112",
+      "gasType": "수소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2026-01",
+      "manufactureDate": "2021-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:10:40.055Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "1b6b1cbb-7014-4b33-85ff-88a970e0d120",
+      "serialNumber": "SDG-TT19998745",
+      "gasType": "액화산소",
+      "capacity": "175L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-05",
+      "manufactureDate": "2024-05",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:16:54.226Z",
+      "containerType": "LGC"
+    },
+    {
+      "id": "710c5cbb-167c-41c1-b71d-7afb9ad8595f",
+      "serialNumber": "SDG-TT9876543",
+      "gasType": "액화질소",
+      "capacity": "175L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-12",
+      "manufactureDate": "2024-12",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:19:04.327Z",
+      "containerType": "LGC"
+    },
+    {
+      "id": "7d0f698d-9a99-4a37-a531-6a8fa9a74944",
+      "serialNumber": "SDG-TT108765",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:19:41.128Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "819252ba-8674-47d7-b711-95dcbf323c8c",
+      "serialNumber": "SDG-TT90687456",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:19:59.651Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "86589e08-0ead-41e7-9aaa-dc543be54b47",
+      "serialNumber": "SDG-TT780049",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:26:03.949Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "0470c785-6ab3-44de-a101-f86d4b9c84f3",
+      "serialNumber": "SDG-TT0731956",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:26:24.608Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "e20930d0-dd49-4d3f-b916-9afffb0f1159",
+      "serialNumber": "SDG-TT9975556",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2031-01",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:26:39.112Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "e5498ffc-de3a-4221-95ea-dcd4908e1448",
+      "serialNumber": "SDG-TT4489763",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2030-07",
+      "manufactureDate": "2025-07",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:26:57.278Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "27eb038d-20dd-4ab8-88a2-8b63c4258c4c",
+      "serialNumber": "SDG-TT594489",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-12",
+      "manufactureDate": "2024-12",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:27:36.852Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "a63634e2-8c64-4fa2-b291-b79902fa89e9",
+      "serialNumber": "SDG-TT901486",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2028-06",
+      "manufactureDate": "2023-06",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:27:56.806Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "b65719f7-aa91-4920-b77d-f062d1c86bba",
+      "serialNumber": "SDG-TT0489633",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2030-03",
+      "manufactureDate": "2025-03",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:28:13.042Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "45cdf93d-2628-4f07-9b48-1da691ad084f",
+      "serialNumber": "SDG-TT03311589",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2028-02",
+      "manufactureDate": "2023-02",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:28:35.019Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "60634393-97df-48c4-89c9-e2b5eecf1525",
+      "serialNumber": "SDG-TT5784496",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2030-11",
+      "manufactureDate": "2025-11",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:28:50.466Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "716649a8-0a14-402d-95d6-1a7c772b96ad",
+      "serialNumber": "SDG-TT6784003",
+      "gasType": "산소",
+      "capacity": "40.2L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2028-06",
+      "manufactureDate": "2023-06",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:29:11.094Z",
+      "containerType": "CYLINDER"
+    },
+    {
+      "id": "dcf9ed8a-7d08-477e-b21f-0db09f6b2d47",
+      "serialNumber": "RACK-0001",
+      "gasType": "산소",
+      "capacity": "40L",
+      "owner": "SAMDUK",
+      "status": "공병",
+      "currentHolderId": "삼덕공장",
+      "workPressure": "",
+      "chargingExpiryDate": "2029-08",
+      "manufactureDate": "2026-01",
+      "lastInspectionDate": "2026-01-15",
+      "createdDate": "2026-01-15T13:31:41.768Z",
+      "containerType": "RACK",
+      "bundleCount": 4,
+      "childSerials": []
+    }
+  ],
+  "transactions": [],
+  "gasItems": [
+    {
+      "id": "O2-10L",
+      "name": "산소",
+      "capacity": "10.2L",
+      "color": "green"
+    },
+    {
+      "id": "O2-40L",
+      "name": "산소",
+      "capacity": "40.2L",
+      "color": "green"
+    },
+    {
+      "id": "N2-10L",
+      "name": "질소",
+      "capacity": "10L",
+      "color": "gray"
+    },
+    {
+      "id": "N2-40L",
+      "name": "질소",
+      "capacity": "40L",
+      "color": "gray"
+    },
+    {
+      "id": "Ar-10L",
+      "name": "아르곤",
+      "capacity": "10L",
+      "color": "grape"
+    },
+    {
+      "id": "Ar-40L",
+      "name": "아르곤",
+      "capacity": "40L",
+      "color": "grape"
+    },
+    {
+      "id": "CO2-10L",
+      "name": "탄산",
+      "capacity": "10L",
+      "color": "blue"
+    },
+    {
+      "id": "CO2-40L",
+      "name": "탄산",
+      "capacity": "40L",
+      "color": "blue"
+    },
+    {
+      "id": "He-10L",
+      "name": "헬륨",
+      "capacity": "10L",
+      "color": "yellow"
+    },
+    {
+      "id": "He-40L",
+      "name": "헬륨",
+      "capacity": "40L",
+      "color": "yellow"
+    },
+    {
+      "id": "Mix-40L",
+      "name": "혼합가스",
+      "capacity": "40L",
+      "color": "cyan"
+    },
+    {
+      "id": "H2-40L",
+      "name": "수소",
+      "capacity": "40L",
+      "color": "orange"
+    },
+    {
+      "id": "C2H2-40L",
+      "name": "아세틸렌",
+      "capacity": "40L",
+      "color": "yellow"
+    },
+    {
+      "id": "GAS-1767343916564",
+      "name": "액체산소",
+      "capacity": "175L",
+      "color": "green"
+    },
+    {
+      "id": "GAS-1767344160550",
+      "name": "액체질소",
+      "capacity": "175L",
+      "color": "gray"
+    },
+    {
+      "id": "GAS-1767344177157",
+      "name": "액체아르곤",
+      "capacity": "175L",
+      "color": "teal"
+    }
+  ],
+  "dailyLedgerNotes": [
+    {
+      "date": "2025-12-30",
+      "deposit": "",
+      "expenditure": ""
+    },
+    {
+      "date": "2026-01-03",
+      "deposit": "",
+      "expenditure": ""
+    }
+  ],
+  "systemConfig": {
+    "backupSchedule": "0 0 * * *",
+    "backupPath": "backups"
+  }
+}

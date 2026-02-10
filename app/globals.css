@@ -1,0 +1,230 @@
+@import "@mantine/core/styles.css";
+@import "@mantine/dates/styles.css";
+@import "@mantine/notifications/styles.css";
+
+/* Premium Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@100..900&display=swap');
+
+:root {
+  --background: #050a14;
+  --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #050a14;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: #ebedef;
+  background: #04080f; /* Matrix Deep Dark */
+  background-attachment: fixed;
+  font-family: "Pretendard", "Inter", sans-serif;
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+  
+  /* [Mobile Optimization] Disable Text Selection & Tap Highlight */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Premium Background Mesh */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(51, 154, 240, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(121, 80, 242, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, transparent 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Subtle Grain Texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Allow text selection in inputs and selectable areas */
+input, textarea, [contenteditable="true"], .selectable-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+/* [Automatic Mobile Optimization] Fluid Root Density Scaling */
+/* Mantine uses 'rem' units for everything. Changing the root font-size scales the entire UI. */
+
+/* Default (Desktop/Tablet/Large Phone) */
+html {
+  font-size: 16px;
+}
+
+/* Small Phones (iPhone SE, Galaxy Z Flip Cover, Narrow Androids) - < 370px */
+@media (max-width: 370px) {
+  html {
+    font-size: 14px; /* Scales UI down by 12.5% to fit more content */
+  }
+}
+
+/* Very Small Screens - < 320px */
+@media (max-width: 320px) {
+  html {
+    font-size: 13px; /* Scales UI down by ~19% */
+  }
+}
+
+/* Global Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(51, 154, 240, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(51, 154, 240, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(51, 154, 240, 0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Glass Utilities */
+.titanium-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* [Power Optimization] Disable heavy glass/blur effects on mobile */
+@media (max-width: 768px) {
+  .titanium-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(20, 25, 40, 0.85); /* Slightly more opaque fallback */
+  }
+}
+
+.titanium-glass-hover:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Stagger Utilities (Can be used with StaggerContainer) */
+.animate-enter {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* [Interactive Scrollbar] Dramatic expansion on hover without layout shift */
+/* [Interactive Scrollbar] Dramatic expansion on hover without layout shift removed */
+
+::-webkit-scrollbar {
+  width: 16px; /* Increased base width */
+  height: 16px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* Base visibility */
+  border-radius: 10px;
+  /* Default: Thin appearing (4px visible) */
+  border: 6px solid transparent; /* 16px - 6px*2 = 4px visible width */
+  background-clip: content-box;
+  transition: background-color 0.2s, border 0.1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* High contrast on hover */
+  /* Hover: Expand significantly (14px visible) */
+  border: 1px solid transparent; /* 16px - 1px*2 = 14px visible width (3.5x larger) */
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* [Mobile Optimization] Hide Scrollbar on Mobile (Touch Navigation) */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+}
+
+/* [Print Support] Ledger Print Styles */
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    body > * { display: none !important; }
+    
+    /* Ensure Portal Content is Visible */
+    .print-portal { 
+        display: block !important; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: white;
+        padding: 5mm; 
+        font-family: serif; 
+        z-index: 9999;
+    }
+    
+    .ledger-table {
+        width: 100%; border-collapse: collapse; font-size: 9pt; table-layout: fixed;
+    }
+    .ledger-table th, .ledger-table td, .ledger-table tr {
+        border: 1px solid black !important; /* Force black borders for print */
+        padding: 2px; text-align: center; height: 24px;
+        color: black !important;
+        background: white !important;
+        -webkit-print-color-adjust: exact; 
+        print-color-adjust: exact; 
+    }
+    .title-area {
+        text-align: center; font-size: 20pt; font-weight: bold; margin-bottom: 10px;
+        letter-spacing: 10px; color: black;
+    }
+    .header-info {
+        display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 11pt; color: black;
+    }
+}
+
+/* Hide Print Portal on Screen */
+@media screen {
+    .print-portal { display: none; }
+}

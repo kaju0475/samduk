@@ -1,0 +1,22 @@
+{
+  "name": "삼덕가스공업 용기관리시스템",
+  "short_name": "삼덕용기",
+  "theme_color": "#050a14",
+  "background_color": "#050a14",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/emblem_v2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/emblem_v2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+﻿
+> samduk-system@0.1.1 build
+> next build
+
+??Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+node.exe : ??The "middleware"
+ file convention is deprecate
+d. Please use "proxy" instead
+. Learn more: https://nextjs.
+org/docs/messages/middleware-
+to-proxy
+위치 줄:1 문자:1
++ & "C:\Program Files\nodejs/
+node.exe" "C:\Program Files\n
+odejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (??The "  
+  middlewa...leware-to-pro   
+ xy:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+  Creating an optimized production build ...
+??Compiled successfully in 5.4s
+  Skipping validation of types
+  Collecting page data using 15 workers ...
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+?벀 [DB] Loaded local backup (db.json)
+??[DB] Full Load Complete
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+?봽 [DB] Full Loading...
+[Crypto] AUTH_SECRET is not s
+et. Using default insecure ke
+y. QR codes may not work acro
+ss environments.
+??[DB] Full Load Complete
+??[DB] Full Load Complete
+??[DB] Full Load Complete
+[Crypto] AUTH_SECRET is not s
+et. Using default insecure ke
+y. QR codes may not work acro
+ss environments.
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+?벀 [DB] Loaded local backup (db.json)
+?봽 [DB] Full Loading...
+??[DB] Full Load Complete
+  Generating static pages using 15 workers (0/19) ...
+  Generating static pages using 15 workers (4/19) 
+  Generating static pages using 15 workers (9/19) 
+  Generating static pages using 15 workers (14/19) 
+??Generating static pages using 15 workers (19/19) in 152.9ms
+  Finalizing page optimization ...
+
+Route (app)
+??? /
+??? /_not-found
+??? /admin/cleanup-test
+??? /admin/settings/backup
+??? /admin/users
+??? /api/admin/check-triggers
+??? /api/admin/diagnose
+??? /api/admin/e2e-setup
+??? /api/admin/schema_probe
+??? /api/admin/schema_probe_insert
+??? /api/admin/seed
+??? /api/admin/simulation-cleanup
+??? /api/admin/verify-names
+??? /api/auth/login
+??? /api/auth/logout
+??? /api/auth/qr-check
+??? /api/auth/qr-login
+??? /api/auth/qr-token
+??? /api/auth/session
+??? /api/batch/lost-detection
+??? /api/dashboard/logs
+??? /api/dashboard/stats
+??? /api/history/cylinder
+??? /api/master/customers
+??? /api/master/customers/import
+??? /api/master/cylinders
+??? /api/master/cylinders/import
+??? /api/master/gases
+??? /api/master/inventory
+??? /api/master/ledger-notes
+??? /api/master/users
+??? /api/master/users/history
+??? /api/search
+??? /api/system/backup
+??? /api/system/backup/config
+??? /api/system/backup/files
+??? /api/system/backup/now
+??? /api/system/backup/restore
+??? /api/system/company
+??? /api/system/initialize
+??? /api/system/lifecycle
+??? /api/system/reports/abnormal
+??? /api/system/reports/actions
+??? /api/system/reports/long-term
+??? /api/system/reports/supply
+??? /api/system/reports/traceability
+??? /api/system/restore
+??? /api/work/charging
+??? /api/work/charging/check
+??? /api/work/delivery
+??? /api/work/delivery/check
+??? /api/work/inspection
+??? /api/work/inspection/check
+??? /api/work/inspection/history
+??? /auth/login
+??? /dashboard
+??? /design/feedback-demo
+????/icon.png
+??? /login
+??? /master
+??? /master/customers
+??? /master/cylinders
+??? /master/gases
+??? /master/inventory
+??? /master/users
+??? /menu
+??? /q
+??? /q/[token]
+??? /system
+??? /system/backup
+??? /system/company
+??? /system/users
+??? /work/charging
+??? /work/delivery
+??? /work/inspection
+
+
+? Proxy (Middleware)
+
+?? (Static)   prerendered as static content
+?  (Dynamic)  server-rendered on demand
+

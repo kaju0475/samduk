@@ -1,0 +1,74 @@
+{
+  "msGas": [
+    {
+      "id": "C1768578467547-s1up7",
+      "name": "(주)MS 인천가스",
+      "phone": null,
+      "address": "인천시 동구 송현동 140-26",
+      "manager": null,
+      "tanks": {},
+      "lastTransactionDate": null,
+      "balance": 0,
+      "created_at": null,
+      "type": "BUSINESS",
+      "payment_type": "tax_invoice",
+      "business_number": "",
+      "ledger_number": "",
+      "corporate_id": "",
+      "fax": ""
+    },
+    {
+      "id": "C1768578467547-k8r68",
+      "name": "(주)MS가스 화성공장",
+      "phone": null,
+      "address": "경기 화성시 비봉면 청요리 428-39",
+      "manager": null,
+      "tanks": {},
+      "lastTransactionDate": null,
+      "balance": 0,
+      "created_at": null,
+      "type": "BUSINESS",
+      "payment_type": "card",
+      "business_number": null,
+      "ledger_number": null,
+      "corporate_id": null,
+      "fax": null
+    },
+    {
+      "id": "C1768578467546-kiywz",
+      "name": "엠에스(ms)엔지니어링",
+      "phone": "031)998-1741",
+      "address": "경기도 김포시 대곶면 산자뫼로 104번길70,1동",
+      "manager": null,
+      "tanks": {},
+      "lastTransactionDate": null,
+      "balance": 0,
+      "created_at": null,
+      "type": "BUSINESS",
+      "payment_type": "card",
+      "business_number": null,
+      "ledger_number": null,
+      "corporate_id": null,
+      "fax": null
+    }
+  ],
+  "mysteryCust": [
+    {
+      "id": "C1768578467547-s1up7",
+      "name": "(주)MS 인천가스",
+      "phone": null,
+      "address": "인천시 동구 송현동 140-26",
+      "manager": null,
+      "tanks": {},
+      "lastTransactionDate": null,
+      "balance": 0,
+      "created_at": null,
+      "type": "BUSINESS",
+      "payment_type": "tax_invoice",
+      "business_number": "",
+      "ledger_number": "",
+      "corporate_id": "",
+      "fax": ""
+    }
+  ]
+}
