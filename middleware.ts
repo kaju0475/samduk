@@ -109,8 +109,25 @@ export function middleware(request: NextRequest) {
   // 1. API 경로 보호
   // ========================================
   if (pathname.startsWith('/api/')) {
-    // 공개 API는 통과
+    // [SUPER ROBUST FIX] Allow automated backup to bypass session check
+    // The API route itself handles its own secret verification via TransactionValidator
+    if (pathname.includes('/system/backup/now')) {
+      console.log(`[Middleware] CRON/BACKUP Path Allowed: ${pathname}`);
+      return NextResponse.next();
+    }
+
+    // 공개 API는 통과 (Whitelisted)
     if (publicApiPaths.some(path => pathname.startsWith(path))) {
+      return NextResponse.next();
+    }
+
+    // [ROBUST FIX] Secret Key Master Bypass (for Cron/Automated tasks)
+    const cronSecret = request.headers.get('x-cron-auth') || 
+                       request.nextUrl.searchParams.get('secret') ||
+                       request.headers.get('authorization')?.replace('Bearer ', '');
+    
+    if (cronSecret && cronSecret === process.env.CRON_SECRET) {
+      console.log(`[Middleware] Cron Secret Authorized: ${pathname}`);
       return NextResponse.next();
     }
 
