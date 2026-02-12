@@ -5,14 +5,23 @@ import { db } from '@/lib/db';
 export async function GET(request: NextRequest) {
     // 1. 보안 검사 (Secret Key 확인)
     const authHeader = request.headers.get('authorization');
-    if (process.env.NODE_ENV === 'production' && process.env.CRON_SECRET) {
-        if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+    const cronSecretHeader = request.headers.get('x-cron-auth');
+    const querySecret = request.nextUrl.searchParams.get('secret');
+    const expectedSecret = process.env.CRON_SECRET;
+
+    if (process.env.NODE_ENV === 'production' && expectedSecret) {
+        const isAuthorized = 
+            (authHeader === `Bearer ${expectedSecret}`) || 
+            (cronSecretHeader === expectedSecret) || 
+            (querySecret === expectedSecret);
+
+        if (!isAuthorized) {
             console.error('[Backup] Auth Failed:', {
-                received: authHeader ? 'Bearer [HIDDEN]' : 'null',
-                expected: 'Bearer [HIDDEN]',
-                match: authHeader === `Bearer ${process.env.CRON_SECRET}`
+                hasAuthHeader: !!authHeader,
+                hasCronHeader: !!cronSecretHeader,
+                hasQuerySecret: !!querySecret,
+                match: false
             });
-            // [SECURITY RESTORED] Enforce strict auth
             return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
         }
     }
