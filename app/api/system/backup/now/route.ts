@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
                     // A. Start JSON
                     const metadata = {
                         timestamp: new Date().toISOString(),
-                        version: '3.0 (Streaming)',
+                        version: '4.0 (Auth Unified)',
                         environment: process.env.NODE_ENV
                     };
                     controller.enqueue(encoder.encode(`{"metadata":${JSON.stringify(metadata)},"data":{`));
