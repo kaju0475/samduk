@@ -1,0 +1,72 @@
+name: Hourly System Backup
+on:
+  schedule:
+    # 매시간 정각(0분)에 실행
+    - cron: '0 * * * *'
+  workflow_dispatch: # 수동 실행 버튼 추가
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Backup Directory
+        run: mkdir -p backups
+
+      - name: Debug Secrets (Safe)
+        run: |
+          if [ -z "${{ secrets.CRON_SECRET }}" ]; then
+            echo "❌ CRON_SECRET is NOT set! Please add it in Settings > Secrets."
+          else
+            echo "✅ CRON_SECRET is set."
+          fi
+
+          if [ -z "${{ secrets.PRODUCTION_URL }}" ]; then
+            echo "❌ PRODUCTION_URL is NOT set! Using default fallback."
+            echo "PRODUCTION_URL=https://samduk-system.vercel.app" >> $GITHUB_ENV
+          else
+            echo "✅ PRODUCTION_URL is set: ${{ secrets.PRODUCTION_URL }}"
+            echo "PRODUCTION_URL=${{ secrets.PRODUCTION_URL }}" >> $GITHUB_ENV
+          fi
+
+      - name: Trigger and Download Backup
+        run: |
+          # 현재 날짜로 파일명 생성
+          FILENAME="backup-$(date +'%Y-%m-%d-%H-%M').json"
+
+          echo "Starting backup from $PRODUCTION_URL..."
+
+          # 프로덕션 서버의 백업 API 호출 및 결과 저장
+          # 1. Capture HTTP Code & Save Response
+          # --connect-timeout 10 --max-time 300 (5분)
+          HTTP_CODE=$(curl -s -w "%{http_code}" -o "backups/$FILENAME" \
+            --connect-timeout 10 \
+            --max-time 300 \
+            -X GET "$PRODUCTION_URL/api/system/backup/now?secret=${{ secrets.CRON_SECRET }}" \
+            -H "x-cron-auth: ${{ secrets.CRON_SECRET }}" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}")
+
+          echo "HTTP Status Code: $HTTP_CODE"
+
+          # 2. Check for Success
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "❌ Backup Failed! Server Response Body:"
+            cat "backups/$FILENAME"  # Print the error message (or Vercel timeout HTML)
+            exit 1
+          fi
+
+          # 3. Validation: Check if JSON is valid (simple check)
+          if ! grep -q '"metadata":' "backups/$FILENAME"; then
+             echo "❌ Backup seems invalid (HTML returned?). Head of file:"
+             head -n 20 "backups/$FILENAME"
+             exit 1
+          fi
+
+          echo "✅ Backup Successful!"
+          ls -lh backups/$FILENAME
+
+      - name: Upload Backup Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-backup
+          path: backups/*.json
+          retention-days: 30

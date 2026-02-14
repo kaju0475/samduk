@@ -1,0 +1,19 @@
+﻿{
+    "id":  "C1768578467547-s1up7",
+    "name":  "(ì£¼)MS ì¸ì²ê°ì¤",
+    "type":  "BUSINESS",
+    "paymentType":  "card",
+    "businessNumber":  "",
+    "ledgerNumber":  "",
+    "corporateId":  "",
+    "representative":  "",
+    "phone":  "",
+    "fax":  "",
+    "address":  "ì¸ì²ì ëêµ¬ ì¡íë 140-26",
+    "tanks":  {
+
+              },
+    "lastTransactionDate":  null,
+    "balance":  0,
+    "isDeleted":  false
+}

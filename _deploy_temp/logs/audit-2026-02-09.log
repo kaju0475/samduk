@@ -1,0 +1,27 @@
+{"timestamp":"2026-02-09T13:00:50.922Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.088Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.254Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.432Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.596Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.764Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:51.924Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:52.086Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:52.251Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:00:52.422Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:11.017Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:12.358Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:13.520Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:14.708Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:15.882Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:17.033Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:18.181Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:19.358Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:20.538Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:04:21.703Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:16:00.160Z","action":"TRANS_CHARGING_START","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","memo":"충전시작"}}
+{"timestamp":"2026-02-09T13:16:01.711Z","action":"TRANS_CHARGING_COMPLETE","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","memo":"충전완료"}}
+{"timestamp":"2026-02-09T13:16:03.966Z","action":"TRANSACTION_DELIVERY","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"납품 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:16:06.158Z","action":"TRANSACTION_COLLECTION","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"회수(공병) 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:19:47.236Z","action":"TRANSACTION_DELIVERY","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"납품 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:19:59.420Z","action":"TRANSACTION_DELIVERY","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"납품 완료: (주)MS 인천가스"}}
+{"timestamp":"2026-02-09T13:20:18.948Z","action":"TRANSACTION_DELIVERY","user":"USER-1769573651001","details":{"cylinder":"TEST-2026-1001","customer":"(주)MS 인천가스","memo":"납품 완료: (주)MS 인천가스"}}

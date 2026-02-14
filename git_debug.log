@@ -1,0 +1,8 @@
+[START] Git Diagnosis and Fix 
+2026-02-11 10:20:39.49 
+[INFO] System PATH: 
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Go\bin;C:\Program Files\nodejs\;C:\Users\new\AppData\Local\Microsoft\WindowsApps;C:\Users\new\go\bin;C:\Users\new\AppData\Roaming\npm;C:\Users\new\AppData\Local\Programs\Antigravity\bin;C:\Program Files (x86)\ESTsoft\ALSee\x64;c:\Users\new\.antigravity\extensions\ms-python.debugpy-2025.18.0-win32-x64\bundled\scripts\noConfigScripts 
+[INFO] Finding Git... 
+정보: 제공된 패턴에 해당되는 파일을 찾지 못했습니다.
+[WARN] Git not in PATH. Checking common paths... 
+[ERROR] Git NOT FOUND. 

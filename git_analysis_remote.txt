@@ -1,0 +1,2 @@
+origin	https://github.com/kaju0475/samduk.git (fetch)
+origin	https://github.com/kaju0475/samduk.git (push)

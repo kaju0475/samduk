@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug Server (Robust)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+      "args": ["dev", "-H", "0.0.0.0"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Next.js: Debug Full Stack",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+      "args": ["dev", "-H", "0.0.0.0"],
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      },
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

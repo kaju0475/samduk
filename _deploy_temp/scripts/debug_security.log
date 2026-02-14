@@ -1,0 +1,12 @@
+STARTING SECURITY TEST
+🚀 Starting Advanced Security & Latency Test...
+
+🕵️ [Scenario 1] Unauthorized Access Attempt...
+✅ Passed: Expected 400, Got 400 (90ms)
+   Response: 작업자 정보가 없습니다. 다시 로그인해주세요.
+
+🐢 [Scenario 2] Invalid Payload (Chaos)...
+✅ Passed: Expected 400, Got 400 (1416ms)
+   Response: 이미 해당 거래처에 납품된 용기입니다.
+
+✨ Security Test Complete!

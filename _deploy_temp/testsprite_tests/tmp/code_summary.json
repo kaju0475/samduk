@@ -1,0 +1,77 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js 15",
+    "React 19",
+    "Mantine UI",
+    "JSON File Database",
+    "node-cron"
+  ],
+  "features": [
+    {
+      "name": "Database Layer (Critical)",
+      "description": "JSON file-based database with atomic writes, caching, mutex locking, and auto-repair functionality",
+      "files": ["lib/db.ts", "lib/types.ts"]
+    },
+    {
+      "name": "Authentication",
+      "description": "Simple session-based authentication with login/logout",
+      "files": ["app/api/auth/login/route.ts", "app/api/auth/logout/route.ts", "middleware.ts"]
+    },
+    {
+      "name": "Customer Management",
+      "description": "CRUD operations for customer data with import/export capabilities",
+      "files": ["app/api/master/customers/route.ts", "app/api/master/customers/import/route.ts", "app/master/customers/page.tsx"]
+    },
+    {
+      "name": "Cylinder Management",
+      "description": "CRUD operations for cylinder (gas container) data",
+      "files": ["app/api/master/cylinders/route.ts", "app/master/cylinders/page.tsx"]
+    },
+    {
+      "name": "Delivery/Collection Workflow",
+      "description": "Managing gas cylinder deliveries and collections with QR scanning",
+      "files": ["app/api/work/delivery/route.ts", "app/work/delivery/page.tsx"]
+    },
+    {
+      "name": "Charging Workflow",
+      "description": "Managing gas cylinder charging operations",
+      "files": ["app/api/work/charging/route.ts", "app/work/charging/page.tsx"]
+    },
+    {
+      "name": "Inspection Workflow",
+      "description": "Managing cylinder inspection processes",
+      "files": ["app/api/work/inspection/route.ts", "app/work/inspection/page.tsx"]
+    },
+    {
+      "name": "QR Scanner Modal",
+      "description": "Reusable QR code scanning component for mobile operations",
+      "files": ["components/Common/QRScannerModal.tsx"]
+    },
+    {
+      "name": "Visual Feedback System",
+      "description": "Edge lighting and visual feedback for scan operations",
+      "files": ["components/Common/EdgeLighting.tsx", "store/visualFeedbackStore.ts"]
+    },
+    {
+      "name": "Backup System",
+      "description": "Automated and manual backup creation with scheduled cron jobs",
+      "files": ["lib/db.ts", "app/api/system/backup/route.ts", "instrumentation.ts"]
+    },
+    {
+      "name": "System Initialization",
+      "description": "Production reset and reload functionality",
+      "files": ["app/api/system/initialize/route.ts"]
+    },
+    {
+      "name": "Dashboard",
+      "description": "Main dashboard with KPIs and system overview",
+      "files": ["app/dashboard/page.tsx", "app/api/dashboard/route.ts"]
+    },
+    {
+      "name": "Recovery Tools",
+      "description": "Scripts and tools for data restoration",
+      "files": ["restore-db.js", "recover_system.bat", "RECOVERY_MANUAL.md"]
+    }
+  ]
+}

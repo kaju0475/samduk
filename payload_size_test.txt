@@ -1,0 +1,5 @@
+🧪 Generating 30,000 dummy cylinder records...
+📊 Payload Size for 30,000 cylinders: 7.89 MB
+🚨 VIOLATION: Exceeds Vercel Serverless Function Limit (4.5 MB)
+   This confirms why exit code 22 (HTTP Error) occurs.
+📊 Total Payload (30k Cyl + 30k Tx): 12.47 MB

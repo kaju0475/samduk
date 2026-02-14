@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라벨 템플릿 가이드 - 24mm x 30mm</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Malgun Gothic', Arial, sans-serif;
+            background-color: #2d3748;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        h1 { font-size: 24px; margin-bottom: 10px; }
+        .subtitle { color: #a0aec0; margin-bottom: 30px; }
+
+        .label-wrapper {
+            background: #4a5568;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        /* 라벨 컨테이너 - 실제 24mm x 30mm */
+        .label {
+            width: 24mm;
+            height: 30mm;
+            background: white;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* 상단 영역: 회사명 (4.5mm) */
+        .zone-top {
+            flex: 0 0 4.5mm;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 0.5mm;
+            overflow: hidden;
+        }
+        .zone-top span {
+            font-size: 7px;
+            font-weight: bold;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        /* 중앙 영역: QR코드 (나머지 공간) */
+        .zone-center {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1mm;
+        }
+        .zone-center #qrcode {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .zone-center #qrcode img {
+            width: 18mm !important;
+            height: 18mm !important;
+        }
+
+        /* 하단 영역: 시리얼 번호 (4mm) */
+        .zone-bottom {
+            flex: 0 0 4mm;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 0.5mm;
+            overflow: hidden;
+        }
+        .zone-bottom span {
+            font-size: 8px;
+            font-weight: bold;
+            font-family: 'Consolas', monospace;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        /* 설명 영역 */
+        .instructions {
+            background: #1a202c;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 100%;
+        }
+        .instructions h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #48bb78;
+        }
+        .instructions ol {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        .instructions strong {
+            color: #63b3ed;
+        }
+        .instructions code {
+            background: #2d3748;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .dimensions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .dim-label {
+            background: #48bb78;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .object-names {
+            margin-top: 20px;
+            padding: 15px;
+            background: #2d3748;
+            border-radius: 8px;
+        }
+        .object-names h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #fbd38d;
+        }
+        .object-names table {
+            width: 100%;
+            font-size: 13px;
+        }
+        .object-names td {
+            padding: 5px 0;
+        }
+        .object-names td:first-child {
+            color: #a0aec0;
+        }
+        .object-names td:last-child {
+            color: #63b3ed;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏷️ 라벨 템플릿 가이드</h1>
+    <p class="subtitle">P-touch Editor에서 아래와 같이 만드세요</p>
+
+    <div class="label-wrapper">
+        <div class="label">
+            <div class="zone-top">
+                <span>삼덕가스공업(주)</span>
+            </div>
+            <div class="zone-center">
+                <div id="qrcode"></div>
+            </div>
+            <div class="zone-bottom">
+                <span>MULE-1036</span>
+            </div>
+        </div>
+        <div class="dimensions">
+            <span class="dim-label">가로 24mm</span>
+            <span class="dim-label">세로 30mm</span>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>P-touch Editor 설정 방법</h2>
+        <ol>
+            <li>새 라벨 만들기 → 용지 크기: <strong>24mm x 30mm</strong></li>
+            <li><strong>상단</strong>에 텍스트 상자 추가 → 회사명 입력</li>
+            <li><strong>중앙</strong>에 <code>[삽입] → [바코드] → [2D/QR코드]</code> 추가</li>
+            <li><strong>하단</strong>에 텍스트 상자 추가 → 시리얼 번호</li>
+            <li>각 개체의 <strong>"개체 이름"</strong>을 아래 표대로 설정</li>
+            <li><code>C:\SamdukLabels\Label.lbx</code> 로 저장</li>
+        </ol>
+
+        <div class="object-names">
+            <h3>⚠️ 중요: 개체 이름 설정</h3>
+            <table>
+                <tr><td>회사명 텍스트:</td><td>Text1</td></tr>
+                <tr><td>QR코드 바코드:</td><td>Text2</td></tr>
+                <tr><td>시리얼 텍스트:</td><td>Text3</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://samduk.vercel.app/cylinders/MULE-1036",
+            width: 68,
+            height: 68,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+    </script>
+</body>
+</html>

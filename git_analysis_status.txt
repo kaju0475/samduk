@@ -1,0 +1,8 @@
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git_analysis_status.txt
+	git_v_log.txt
+	git_v_status.txt
+
+nothing added to commit but untracked files present (use "git add" to track)

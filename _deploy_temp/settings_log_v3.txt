@@ -1,0 +1,17 @@
+🧪 Starting Settings Table Simulation...
+[Step 1] Attempting to Save Settings...
+✅ Save Successful: [
+  {
+    key: 'company',
+    value: { aliases: [Array], companyName: 'Simulated Company (Test)' },
+    created_at: '2026-02-03T09:17:54.728945+00:00',
+    updated_at: '2026-02-03T09:29:43.816+00:00'
+  }
+]
+[Step 2] Attempting to Read Settings...
+✅ Read Successful: {
+  value: {
+    aliases: [ 'TEST', 'SIM' ],
+    companyName: 'Simulated Company (Test)'
+  }
+}

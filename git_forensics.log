@@ -1,0 +1,13 @@
+﻿[START] Git Forensics at 02/11/2026 10:32:31
+--- 1. Registry Check ---
+HKLM Git: 
+HKLM (x64) Git: 
+--- 2. Path Environment Variables ---
+Machine PATH: C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Go\bin;C:\Program Files\nodejs\
+User PATH: C:\Users\new\AppData\Local\Microsoft\WindowsApps;C:\Users\new\go\bin;C:\Users\new\AppData\Roaming\npm;C:\Users\new\AppData\Local\Programs\Antigravity\bin
+--- 3. Running Processes (Git Related) ---
+--- 4. Directory Check ---
+Current Directory: C:\Users\new\Desktop\삼덕용기\samduk-system
+--- 5. Command Search ---
+Where git: 
+[END] Forensics Completed.

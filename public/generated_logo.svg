@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+    <!-- Background Circle -->
+    <circle cx="250" cy="250" r="200" stroke="#0032A0" stroke-width="15" fill="none" />
+    
+    <!-- Triangle / Mountain Shape -->
+    <!-- Top point: (250, 110) -->
+    <!-- Left base: (120, 350) -->
+    <!-- Right base: (380, 350) -->
+    <path d="M 250 110 L 120 350 L 380 350 Z" stroke="#0032A0" stroke-width="15" fill="none" stroke-linejoin="round" />
+    
+    <!-- Internal Crossbars (Horizontal lines) -->
+    <!-- Upper bar -->
+    <path d="M 180 230 L 320 230" stroke="#0032A0" stroke-width="15" stroke-linecap="round" />
+    
+    <!-- Lower bar -->
+    <path d="M 140 310 L 360 310" stroke="#0032A0" stroke-width="15" stroke-linecap="round" />
+
+    <!-- Bottom Curve (River) - Stylized -->
+    <!-- Creating a curve that flows at the bottom -->
+    <path d="M 150 380 Q 250 440 350 380" stroke="#0032A0" stroke-width="15" fill="none" stroke-linecap="round" />
+
+</svg>

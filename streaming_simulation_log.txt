@@ -1,0 +1,12 @@
+🚀 [Simulation] Starting Streaming Logic Test...
+   📦 Streamed users: 13 records
+   📦 Streamed customers: 278 records
+   📦 Streamed cylinders: 100 records
+   📦 Streamed transactions: 53 records
+   📦 Streamed gas_items: 12 records
+   ❌ Simulation Error: {
+  "code": "PGRST205",
+  "details": null,
+  "hint": null,
+  "message": "Could not find the table 'public.daily_ledger_notes' in the schema cache"
+}

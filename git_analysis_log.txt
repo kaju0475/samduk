@@ -1,0 +1,5 @@
+cd31647 feat: integrate backup into TransactionValidator and perform system audit
+d45e8cb chore: deep reset authentication and clean redundant scripts
+53e2c68 security: remove exposed GitHub token from batch file
+2b6ff15 fix: enhance backup workflow and add secret setup script
+8a35ac8 refactor: automated system recovery and secret cleanup

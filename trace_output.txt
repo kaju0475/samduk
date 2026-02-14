@@ -1,0 +1,7 @@
+Target Customer ID: C1768578467547-s1up7
+Transactions found for MS Gas: 1
+Tracing specific cylinder from Tx: TEST-2026-1069
+Cylinder Found: ID=TEST-2026-1069, Serial=TEST-2026-1069
+
+Final Derived Holder: C1768578467547-s1up7
+Equal to Target? true

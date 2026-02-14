@@ -1,0 +1,23 @@
+STARTING SIMULATION
+🚀 Starting Core Workflow Simulation...
+📋 Target: TEST-2026-1001 (TEST-2026-1001)
+   Customer: (주)MS 인천가스 (C1768578467547-s1up7)
+   Worker: 김남필 (USER-1769573651001)
+
+🔋 [Step 1] Charging START...
+✅ Success: 충전시작
+   Status: 충전중, Holder: 삼덕공장
+
+🔋 [Step 2] Charging COMPLETE...
+✅ Success: 충전완료
+   Status: 실병, Holder: 삼덕공장
+
+🚚 [Step 3] Delivery...
+✅ Success: 납품 완료: 탄산 (TEST-2026-1001)
+   Status: 납품, Holder: C1768578467547-s1up7
+
+📦 [Step 4] Collection (Empty)...
+✅ Success: 회수(공병) 완료: 탄산 (TEST-2026-1001)
+   Status: 공병, Holder: 삼덕공장
+
+✨ Simulation Complete!

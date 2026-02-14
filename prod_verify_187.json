@@ -1,0 +1,17 @@
+{
+  "id": "347e3f2c-dbe9-4257-b3e2-f3253422d29b",
+  "serialNumber": "VERIFY-187",
+  "gasType": "산소",
+  "capacity": "40L",
+  "owner": "삼덕공장",
+  "ownerName": "삼덕공장",
+  "location": "삼덕공장",
+  "locationName": "삼덕공장",
+  "status": "공병",
+  "chargingExpiryDate": null,
+  "manufactureDate": null,
+  "lastInspectionDate": null,
+  "containerType": "CYLINDER",
+  "gasColor": "green",
+  "parentRackId": null
+}

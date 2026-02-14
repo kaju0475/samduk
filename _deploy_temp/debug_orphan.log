@@ -1,0 +1,6 @@
+STARTING SCRIPT
+Checking Env: URL=OK, KEY=OK
+Supabase client created
+🔍 Starting Data Integrity Audit...
+📊 Reference Data: 100 Cylinders, 278 Customers
+✅ Audit Complete. Report saved to orphan_report.log

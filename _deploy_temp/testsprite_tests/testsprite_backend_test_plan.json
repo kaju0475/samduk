@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TC001",
+    "title": "user login functionality",
+    "description": "Verify that the user can successfully log in using valid credentials through the /api/auth/login endpoint and that session management is correctly handled."
+  },
+  {
+    "id": "TC002",
+    "title": "user logout functionality",
+    "description": "Verify that the user can successfully log out through the /api/auth/logout endpoint and that the session is properly terminated."
+  },
+  {
+    "id": "TC003",
+    "title": "qr login functionality",
+    "description": "Verify that the user can authenticate using QR code login via the /api/auth/qr-login endpoint and that the authentication process is secure and reliable."
+  },
+  {
+    "id": "TC004",
+    "title": "cylinder creation update and listing",
+    "description": "Verify that cylinders can be created, updated, and listed accurately using the /api/master/cylinders endpoint with no data loss or inconsistency."
+  },
+  {
+    "id": "TC005",
+    "title": "charging process actions",
+    "description": "Verify that charging actions (START and COMPLETE) can be processed correctly for selected cylinders via the /api/work/charging endpoint and that cylinder statuses are updated accordingly."
+  },
+  {
+    "id": "TC006",
+    "title": "delivery and collection processing",
+    "description": "Verify that delivery and collection actions can be processed correctly for cylinders associated with customers through the /api/work/delivery endpoint."
+  },
+  {
+    "id": "TC007",
+    "title": "cylinder history retrieval",
+    "description": "Verify that historical data for specific cylinders can be retrieved accurately through the /api/history/cylinder endpoint, reflecting all past activities."
+  },
+  {
+    "id": "TC008",
+    "title": "long term inventory reporting",
+    "description": "Verify that the system can generate comprehensive long-term inventory reports through the /api/system/reports/long-term endpoint with consistent and complete data."
+  }
+]

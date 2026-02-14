@@ -1,0 +1,13 @@
+{
+  "crons": [
+    {
+      "path": "/api/system/backup/now",
+      "schedule": "0 * * * *"
+    }
+  ],
+  "functions": {
+    "app/api/**/*": {
+      "maxDuration": 60
+    }
+  }
+}

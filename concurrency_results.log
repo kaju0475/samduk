@@ -1,0 +1,20 @@
+🔥 Concurrency Test (Normal) Started at 2026-02-09T13:04:59.108Z
+Target: TEST-2026-1001 -> (주)MS 인천가스
+🚀 Sending 10 simultaneous requests...
+[REQ 1] 400 (1006ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 9] 400 (1993ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 0] 400 (2945ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 2] 400 (3826ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 3] 400 (4716ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 4] 400 (5617ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 5] 400 (6562ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 6] 400 (7440ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 7] 400 (8357ms) -> 🛡️ BLOCKED (Duplicate)
+[REQ 8] 400 (9235ms) -> 🛡️ BLOCKED (Duplicate)
+
+📊 Summary:
+Total: 10
+Success: 0 (Ideal: 1)
+Blocked: 10 (Ideal: 9)
+Failed: 0
+⚠️ WARN: Unexpected results.

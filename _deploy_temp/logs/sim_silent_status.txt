@@ -1,0 +1,22 @@
+STARTED: Simulation Initialized
+[2026-02-09T00:21:11.956Z] PHASE 0: Cleanup...
+[2026-02-09T00:21:12.530Z] PHASE 1: Preparing Customers...
+[2026-02-09T00:21:12.695Z] PROGRESS: customers Batch 1 OK
+[2026-02-09T00:21:13.082Z] PROGRESS: customers Batch 2 OK
+[2026-02-09T00:21:13.464Z] PROGRESS: customers Batch 3 OK
+[2026-02-09T00:21:13.831Z] PROGRESS: customers Batch 4 OK
+[2026-02-09T00:21:14.036Z] PHASE 2: Preparing Cylinders...
+[2026-02-09T00:21:14.211Z] PROGRESS: cylinders Batch 1 OK
+[2026-02-09T00:21:14.612Z] PROGRESS: cylinders Batch 2 OK
+[2026-02-09T00:21:15.003Z] PROGRESS: cylinders Batch 3 OK
+[2026-02-09T00:21:15.375Z] PROGRESS: cylinders Batch 4 OK
+[2026-02-09T00:21:15.581Z] PHASE 3: Preparing Transactions...
+[2026-02-09T00:21:15.753Z] PROGRESS: transactions Batch 1 OK
+[2026-02-09T00:21:16.134Z] PROGRESS: transactions Batch 2 OK
+[2026-02-09T00:21:16.520Z] PROGRESS: transactions Batch 3 OK
+[2026-02-09T00:21:16.901Z] PROGRESS: transactions Batch 4 OK
+[2026-02-09T00:21:17.117Z] PHASE 4: Verification...
+[2026-02-09T00:21:17.440Z] VERIFY: Customers Found 5/5
+[2026-02-09T00:21:17.440Z] VERIFY: Transactions Found 5/5
+[2026-02-09T00:21:17.441Z] PHASE 5: Final Cleanup...
+[2026-02-09T00:21:18.310Z] SUCCESS: Simulation Complete

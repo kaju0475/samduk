@@ -1,0 +1,33 @@
+﻿위치 줄:1 문자:76
++ ... st -Uri http://localhos
+t:3000/api/master/cylinders?s
+tatus=실병&location ...
++                            
+                             
+        ~
+앰퍼샌드(&) 문자를 사용할 수 
+없습니다. & 연산자는 나중에 
+사용하도록 예약되었습니다. 앰
+퍼샌드를 문자열의 일부로 전달
+하려면 큰따옴표로 묶으십시오(
+"&").
+위치 줄:1 문자:90
++ ... /localhost:3000/api/mas
+ter/cylinders?status=실병&loc
+ation=삼덕공장&pageSize ...
++                            
+                             
+        ~
+앰퍼샌드(&) 문자를 사용할 수 
+없습니다. & 연산자는 나중에 
+사용하도록 예약되었습니다. 앰
+퍼샌드를 문자열의 일부로 전달
+하려면 큰따옴표로 묶으십시오(
+"&").
+    + CategoryInfo           
+   : ParserError: (:) [], P  
+  arentContainsErrorRecord   
+ Exception
+    + FullyQualifiedErrorId  
+   : AmpersandNotAllowed
+ 

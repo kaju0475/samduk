@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트 뮬 QR코드 - 60개</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: #f5f5f5;
+            padding: 10px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+        }
+        
+        .print-btn {
+            background: #228BE6;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .print-btn:hover {
+            background: #1C7ED6;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .qr-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .qr-card .serial {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .qr-card .qr-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 8px;
+        }
+        
+        .qr-card .info {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .qr-card .status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        /* Status colors */
+        .status-full { background: #D3F9D8; color: #2B8A3E; }
+        .status-empty { background: #E9ECEF; color: #495057; }
+        .status-납품 { background: #D0EBFF; color: #1864AB; }
+        .status-charging { background: #FFF3BF; color: #E67700; }
+        .status-inspection { background: #E5DBFF; color: #5F3DC4; }
+        .status-lost { background: #FFE3E3; color: #C92A2A; }
+        .status-scrapped { background: #868E96; color: white; }
+        
+        @media print {
+            .header { display: none; }
+            body { padding: 0; background: white; }
+            .grid { gap: 5px; }
+            .qr-card { border: 1px solid #999; padding: 10px; }
+            .qr-card .qr-img { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧪 테스트 뮬 QR코드 - 60개</h1>
+        <p>다양한 시나리오별 테스트 용기</p>
+        <p style="color: #FA5252; margin-top: 10px;">⚠️ 테스트 후 반드시 cleanup-test-mule-60.js 실행하여 데이터 삭제</p>
+        <button class="print-btn" onclick="window.print()">🖨️ 인쇄하기</button>
+    </div>
+    
+    <div class="grid" id="qrGrid"></div>
+    
+    <script>
+        // 60개 테스트 뮬 데이터
+        const testMules = [
+            // 1-10: 충전완료
+            { serial: 'MULE-001', gas: 'O2', status: 'FULL', desc: '충전완료-산소' },
+            { serial: 'MULE-002', gas: 'N2', status: 'FULL', desc: '충전완료-질소' },
+            { serial: 'MULE-003', gas: 'Ar', status: 'FULL', desc: '충전완료-아르곤' },
+            { serial: 'MULE-004', gas: 'CO2', status: 'FULL', desc: '충전완료-탄산' },
+            { serial: 'MULE-005', gas: 'He', status: 'FULL', desc: '충전완료-헬륨' },
+            { serial: 'MULE-006', gas: 'O2', status: 'FULL', desc: '충전완료-산소2' },
+            { serial: 'MULE-007', gas: 'N2', status: 'FULL', desc: '충전완료-질소2' },
+            { serial: 'MULE-008', gas: 'Ar', status: 'FULL', desc: '충전완료-아르곤2' },
+            { serial: 'MULE-009', gas: 'O2', status: 'FULL', desc: '충전완료-산소3' },
+            { serial: 'MULE-010', gas: 'N2', status: 'FULL', desc: '충전완료-질소3' },
+            
+            // 11-20: 공병
+            { serial: 'MULE-011', gas: 'O2', status: 'EMPTY', desc: '공병-산소' },
+            { serial: 'MULE-012', gas: 'N2', status: 'EMPTY', desc: '공병-질소' },
+            { serial: 'MULE-013', gas: 'Ar', status: 'EMPTY', desc: '공병-아르곤' },
+            { serial: 'MULE-014', gas: 'CO2', status: 'EMPTY', desc: '공병-탄산' },
+            { serial: 'MULE-015', gas: 'He', status: 'EMPTY', desc: '공병-헬륨' },
+            { serial: 'MULE-016', gas: 'O2', status: 'EMPTY', desc: '공병-산소2' },
+            { serial: 'MULE-017', gas: 'N2', status: 'EMPTY', desc: '공병-질소2' },
+            { serial: 'MULE-018', gas: 'Ar', status: 'EMPTY', desc: '공병-아르곤2' },
+            { serial: 'MULE-019', gas: 'O2', status: 'EMPTY', desc: '공병-산소3' },
+            { serial: 'MULE-020', gas: 'N2', status: 'EMPTY', desc: '공병-질소3' },
+            
+            // 21-30: 납품중
+            { serial: 'MULE-021', gas: 'O2', status: '납품', desc: '납품중-산소' },
+            { serial: 'MULE-022', gas: 'N2', status: '납품', desc: '납품중-질소' },
+            { serial: 'MULE-023', gas: 'Ar', status: '납품', desc: '납품중-아르곤' },
+            { serial: 'MULE-024', gas: 'CO2', status: '납품', desc: '납품중-탄산' },
+            { serial: 'MULE-025', gas: 'He', status: '납품', desc: '납품중-헬륨' },
+            { serial: 'MULE-026', gas: 'O2', status: '납품', desc: '납품중-산소2' },
+            { serial: 'MULE-027', gas: 'N2', status: '납품', desc: '납품중-질소2' },
+            { serial: 'MULE-028', gas: 'Ar', status: '납품', desc: '납품중-아르곤2' },
+            { serial: 'MULE-029', gas: 'O2', status: '납품', desc: '납품중-산소3' },
+            { serial: 'MULE-030', gas: 'N2', status: '납품', desc: '납품중-질소3' },
+            
+            // 31-40: 검사 관련
+            { serial: 'MULE-031', gas: 'O2', status: 'INSPECTION', desc: '검사중-산소' },
+            { serial: 'MULE-032', gas: 'N2', status: 'INSPECTION', desc: '검사중-질소' },
+            { serial: 'MULE-033', gas: 'Ar', status: 'INSPECTION', desc: '검사중-아르곤' },
+            { serial: 'MULE-034', gas: 'O2', status: 'FULL', desc: '검사만료-산소' },
+            { serial: 'MULE-035', gas: 'N2', status: 'FULL', desc: '검사만료-질소' },
+            { serial: 'MULE-036', gas: 'O2', status: 'FULL', desc: '검사임박-산소' },
+            { serial: 'MULE-037', gas: 'N2', status: 'FULL', desc: '검사임박-질소' },
+            { serial: 'MULE-038', gas: 'Ar', status: 'FULL', desc: '검사여유-아르곤' },
+            { serial: 'MULE-039', gas: 'O2', status: 'INSPECTION_PASS', desc: '검사합격-산소' },
+            { serial: 'MULE-040', gas: 'N2', status: 'INSPECTION_PASS', desc: '검사합격-질소' },
+            
+            // 41-50: 분실 및 특수
+            { serial: 'MULE-041', gas: 'O2', status: 'LOST', desc: '분실-산소' },
+            { serial: 'MULE-042', gas: 'N2', status: 'LOST', desc: '분실-질소' },
+            { serial: 'MULE-043', gas: 'Ar', status: 'LOST', desc: '분실-아르곤' },
+            { serial: 'MULE-044', gas: 'O2', status: 'CHARGING', desc: '충전중-산소' },
+            { serial: 'MULE-045', gas: 'N2', status: 'CHARGING', desc: '충전중-질소' },
+            { serial: 'MULE-046', gas: 'Ar', status: 'CHARGING', desc: '충전중-아르곤' },
+            { serial: 'MULE-047', gas: 'O2', status: 'SCRAPPED', desc: '폐기-산소' },
+            { serial: 'MULE-048', gas: 'N2', status: 'SCRAPPED', desc: '폐기-질소' },
+            { serial: 'MULE-049', gas: 'O2', status: 'INSPECTION_FAIL', desc: '검사불합격-산소' },
+            { serial: 'MULE-050', gas: 'N2', status: 'INSPECTION_FAIL', desc: '검사불합격-질소' },
+            
+            // 51-60: 혼합
+            { serial: 'MULE-051', gas: 'MIX', status: 'FULL', desc: '혼합가스-충전' },
+            { serial: 'MULE-052', gas: 'MIX', status: 'EMPTY', desc: '혼합가스-공병' },
+            { serial: 'MULE-053', gas: 'MIX', status: '납품', desc: '혼합가스-납품' },
+            { serial: 'MULE-054', gas: 'O2', status: 'FULL', desc: '대용량-산소 47L' },
+            { serial: 'MULE-055', gas: 'N2', status: 'FULL', desc: '대용량-질소 47L' },
+            { serial: 'MULE-056', gas: 'O2', status: 'FULL', desc: '소용량-산소 10L' },
+            { serial: 'MULE-057', gas: 'N2', status: 'FULL', desc: '소용량-질소 10L' },
+            { serial: 'MULE-058', gas: 'O2', status: 'EMPTY', desc: '대용량공병-산소 47L' },
+            { serial: 'MULE-059', gas: 'N2', status: 'EMPTY', desc: '대용량공병-질소 47L' },
+            { serial: 'MULE-060', gas: 'Ar', status: 'FULL', desc: '대용량-아르곤 47L' },
+        ];
+        
+        const grid = document.getElementById('qrGrid');
+        
+        testMules.forEach((mule, idx) => {
+            const card = document.createElement('div');
+            card.className = 'qr-card';
+            
+            // Generate QR
+            const qr = qrcode(0, 'M');
+            qr.addData(mule.serial);
+            qr.make();
+            
+            const statusClass = getStatusClass(mule.status);
+            
+            card.innerHTML = `
+                <div class="serial">${idx + 1}. ${mule.serial}</div>
+                <div class="qr-img">${qr.createImgTag(3)}</div>
+                <div class="info">
+                    <div>${mule.gas} | ${mule.desc}</div>
+                    <span class="status ${statusClass}">${mule.status}</span>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+        
+        function getStatusClass(status) {
+            const s = status.toLowerCase();
+            if (s === 'full') return 'status-full';
+            if (s === 'empty') return 'status-empty';
+            if (s === '납품') return 'status-납품';
+            if (s.includes('charging')) return 'status-charging';
+            if (s.includes('inspection')) return 'status-inspection';
+            if (s === 'lost') return 'status-lost';
+            if (s === 'scrapped') return 'status-scrapped';
+            return '';
+        }
+    </script>
+</body>
+</html>

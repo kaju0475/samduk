@@ -1,0 +1,120 @@
+🚀 Starting 100-Cycle Heavy Load Simulation...
+
+[Phase 1] Creating 100 Customers...
+.....
+✅ Customers: 100 OK, 0 Fail
+
+[Phase 2] Creating 100 Cylinders...
+❌ Cylinder 0 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+.❌ Cylinder 1 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 2 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 3 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 4 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 5 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 6 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 7 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 8 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 9 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 10 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 11 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 12 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 13 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 14 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 15 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 16 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 17 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 18 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 19 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 20 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+.❌ Cylinder 21 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 22 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 23 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 24 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 25 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 26 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 27 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 28 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 29 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 30 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 31 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 32 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 33 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 34 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 35 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 36 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 37 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 38 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 39 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 40 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+.❌ Cylinder 41 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 42 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 43 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 44 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 45 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 46 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 47 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 48 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 49 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 50 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 51 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 52 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 53 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 54 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 55 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 56 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 57 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 58 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 59 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 60 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+.❌ Cylinder 61 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 62 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 63 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 64 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 65 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 66 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 67 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 68 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 69 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 70 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 71 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 72 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 73 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 74 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 75 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 76 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 77 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 78 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 79 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 80 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+.❌ Cylinder 81 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 82 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 83 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 84 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 85 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 86 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 87 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 88 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 89 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 90 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 91 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 92 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 93 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 94 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 95 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 96 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 97 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 98 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+❌ Cylinder 99 Failed: null value in column "ownership" of relation "cylinders" violates not-null constraint
+
+✅ Cylinders: 0 OK, 100 Fail
+
+[Phase 3] Executing 100 Delivery Transactions...
+
+✅ Transactions: 0 OK, 0 Fail
+
+[Phase 4] Verifying Data Integrity...
+✅ Customer Integrity Verified (Snake Case Mapped Correctly)
+
+[Phase 5] Cleanup...
+✅ Cleanup Complete.
+✅ Simulation Script Finished Successfully.

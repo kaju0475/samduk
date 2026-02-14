@@ -1,0 +1,8 @@
+[START] Git Fix via Node at 2026-02-11T01:24:38.921Z
+[INFO] Hunting for Git...
+[EXEC] "git" --version
+[STDERR] 'git'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ�
+��ġ ������ �ƴմϴ�.
+[EXIT] Code 1
+[WARN] Git not in PATH
+[FATAL] Script failed: Git executable NOT FOUND in any common location.
